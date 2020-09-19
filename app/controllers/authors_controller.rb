@@ -35,26 +35,26 @@ class AuthorsController < ApplicationController
 
   def update
   @author = Author.find(params[:id])
-   if @author.update(author_params)
-   flash[:notice] = "Author was updated"
-   redirect_to author_path(@author)
-   else
-   flash[:notice] = "Author was not updated"
-   render 'edit'
-   end
-end
+    if @author.update(author_params)
+      flash[:notice] = "Author was updated"
+      redirect_to author_path(@author)
+    else
+      flash[:notice] = "Author was not updated"
+      render 'edit'
+    end
+  end
 
   def destroy
   @author = Author.find(params[:id])
-  @author.destroy
-  flash[:notice] = "Author was deleted"
-  redirect_to authors_path
+    @author.destroy
+    flash[:notice] = "Author was deleted"
+    redirect_to authors_path
   end
 
   private
 
 	def author_params
-  params.require(:author).permit(:first_name, :last_name, :date_of_birth)
+    params.require(:author).permit(:first_name, :last_name, :date_of_birth)
   end
 
   def set_author

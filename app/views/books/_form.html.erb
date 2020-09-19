@@ -4,9 +4,9 @@
 			<div class="row">
 				<div class="col-lg-7 mx-auto">
 					<div class="p-5">
-						<div class="text-center">
+					<!-- 	<div class="text-center">
 							<h1 class="h4 text-gray-900 mb-4">Add Book Details</h1>
-						</div>
+						</div> -->
 
 				    <%= form_with(model: @book, local: true) do |form| %>
 						
@@ -15,8 +15,6 @@
               </div>
               <div class="form-group">
               	<%= select_tag "author_id[]", options_for_select(Author.all.sort.collect{|author| [author.full_name,author.id]}), {:include_blank => true, :multiple => true, :size => 5, :class => 'form-control form-control-user'} %>
-              	<%#= select_tag "users[]", options_for_select(@users.collect{|x| [x.name,x.id]}), {:multiple => :multiple, :size => 10} %>
-                <%#= form.collection_select(:author_id, Author.all,:id, :full_name,{prompt: "Please Select Author"},{ :class => 'form-control form-control-user'}) %>
               </div>
               <div class="form-group">
              	  <%= form.submit "Save", class: 'btn btn-primary btn-user btn-block'%>

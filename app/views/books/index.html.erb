@@ -2,7 +2,7 @@
 <p>
 <%= link_to "Create new book", new_book_path %>
 </p>
-<table>
+<table class="table table-bordered">
  <tr>
   <th>Title</th>
   <th>Author Name</th>
@@ -12,8 +12,7 @@
  <tr>
   <td><%= book.title %></td>
   <td>
-				   		
-	  <% book.authors.each do |author| %>
+		<% book.authors.each do |author| %>
 			<%= author.first_name+" "+author.last_name%>
 	  <%end%>
   </td>
@@ -23,3 +22,5 @@
  </tr>
  <% end %>
 </table>
+
+<%= link_to 'Back', root_path %>

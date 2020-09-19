@@ -19,7 +19,6 @@ class BooksController < ApplicationController
   end
 
   def create
-    
     authors = []
     params[:author_id].each do |author_id|
       authors << Author.find(author_id)
@@ -40,7 +39,7 @@ class BooksController < ApplicationController
   end
 
   def update
-   authors = []
+    authors = []
     params[:author_id].each do |author_id|
       authors << Author.find(author_id)
     end
