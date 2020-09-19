@@ -1,0 +1,35 @@
+<h1 class="h3 mb-2 text-gray-800">Author Details</h1>
+  </div>
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th><strong>First Name</strong></th>
+              <th><strong>Last Name</strong></th>
+              <th><strong>DOB</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @author.first_name%></td>
+              <td><%= @author.last_name %></td>
+              <td><%= @author.date_of_birth %></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<%= link_to 'Back', authors_path %>
+
+
+
+
+
+
+    
